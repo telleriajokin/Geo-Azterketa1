@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hiriak>
+    <hiria>
+        <izena>Ermua</izena>
+        <koordenatuak>
+            <latitudea>1</latitudea>
+            <longitudea>1</longitudea>
+        </koordenatuak>
+    </hiria>
+    <hiria>
+        <izena>Eibar</izena>
+        <koordenatuak>
+            <latitudea>1</latitudea>
+            <longitudea>2</longitudea>
+        </koordenatuak>
+    </hiria>
+    <hiria>
+        <izena>Elgoibar</izena>
+        <koordenatuak>
+            <latitudea>1</latitudea>
+            <longitudea>3</longitudea>
+        </koordenatuak>
+    </hiria>
+    <hiria>
+        <izena>Mallabia</izena>
+        <koordenatuak>
+            <latitudea>2</latitudea>
+            <longitudea>2</longitudea>
+        </koordenatuak>
+    </hiria>
+</hiriak>
