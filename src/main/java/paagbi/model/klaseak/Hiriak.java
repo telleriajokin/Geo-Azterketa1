@@ -1,18 +1,15 @@
-package paagbi.model.klaseak;
 
-import jakarta.xml.bind.annotation.*;
+package paagbi.model.klaseak;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@XmlRootElement(name = "hiriak")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Hiriak {
 
-    @XmlElement(name = "hiria")
-    private List<Hiria> hiriak = new ArrayList<>();
+    private List<Hiria> hiriak;
 
     public Hiriak() {
+        this.hiriak = new ArrayList<>();
     }
 
     public List<Hiria> getHiriak() {
@@ -21,5 +18,9 @@ public class Hiriak {
 
     public void setHiriak(List<Hiria> hiriak) {
         this.hiriak = hiriak;
+    }
+
+    public void gehituHiria(Hiria hiria) {
+        hiriak.add(hiria);
     }
 }

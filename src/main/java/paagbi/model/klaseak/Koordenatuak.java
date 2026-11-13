@@ -1,29 +1,12 @@
+
 package paagbi.model.klaseak;
 
-import java.util.Scanner;
-
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Koordenatuak {
 
     private String latitudea;
     private String longitudea;
 
-    public Koordenatuak() {
-    }
-
-    public Koordenatuak(Scanner scan) {
-        System.out.print("Hiriaren latitudea: ");
-        latitudea = scan.nextLine();
-        System.out.print("Hiriaren longitudea: ");
-        longitudea = scan.nextLine();
-    }
-
-    public Koordenatuak(String latitudea,
-                        String longitudea) {
-
+    public Koordenatuak(String latitudea, String longitudea) {
         this.latitudea = latitudea;
         this.longitudea = longitudea;
     }
@@ -42,5 +25,17 @@ public class Koordenatuak {
 
     public void setLongitudea(String longitudea) {
         this.longitudea = longitudea;
+    }
+
+    public double distantzia(Koordenatuak puntua) {
+
+        double lat1 = Double.parseDouble(this.latitudea);
+        double lon1 = Double.parseDouble(this.longitudea);
+
+        double lat2 = Double.parseDouble(puntua.getLatitudea());
+        double lon2 = Double.parseDouble(puntua.getLongitudea());
+
+        return Math.pow(lat2 - lat1, 2)
+                + Math.pow(lon2 - lon1, 2);
     }
 }

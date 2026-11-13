@@ -1,31 +1,14 @@
+
 package paagbi.model.klaseak;
 
-import java.util.Scanner;
-
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Hiria {
 
     private String izena;
-
     private Koordenatuak koordenatuak;
 
-    public Hiria() {
-    }
-
-    public Hiria(String izena,
-                 Koordenatuak koordenatuak) {
-
+    public Hiria(String izena, Koordenatuak koordenatuak) {
         this.izena = izena;
         this.koordenatuak = koordenatuak;
-    }
-
-    public Hiria (Scanner scan) {
-        System.out.print("Hiriaren izena: ");
-        izena = scan.nextLine();
-        koordenatuak = new Koordenatuak(scan);
     }
 
     public String getIzena() {

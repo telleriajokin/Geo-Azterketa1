@@ -89,7 +89,7 @@ public class App {
 
             Hiria hiria = new Hiria(izena, koordenatuak);
 
-            hiriak.getHiriak().add(hiria);
+            hiriak.gehituHiria(hiria);
 
             marshal.gorde(hiriak);
 
@@ -234,26 +234,17 @@ public class App {
      * @param hiriak bilatu beharreko hirien zerrenda
      * @return hurbilen dagoen Hiria objektua
      */
-    private static Hiria hurbilenekoHiria(Koordenatuak puntua, List<Hiria> hiriak) {
+    private static Hiria hurbilenekoHiria(
+            Koordenatuak puntua,
+            List<Hiria> hiriak) {
 
         Hiria hurbilena = null;
         double distantziaMin = Double.MAX_VALUE;
 
-        double lat1 = Double.parseDouble(puntua.getLatitudea());
-        double lon1 = Double.parseDouble(puntua.getLongitudea());
-
         for (Hiria h : hiriak) {
 
-            double lat2 = Double.parseDouble(
-                    h.getKoordenatuak().getLatitudea()
-            );
-
-            double lon2 = Double.parseDouble(
-                    h.getKoordenatuak().getLongitudea()
-            );
-
-            double distantzia = Math.pow(lat2 - lat1, 2)
-                    + Math.pow(lon2 - lon1, 2);
+            double distantzia =
+                    puntua.distantzia(h.getKoordenatuak());
 
             if (distantzia < distantziaMin) {
 
