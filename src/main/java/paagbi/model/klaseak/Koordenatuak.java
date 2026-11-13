@@ -1,4 +1,3 @@
-
 package paagbi.model.klaseak;
 
 public class Koordenatuak {

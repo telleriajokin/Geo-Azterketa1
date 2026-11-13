@@ -1,4 +1,3 @@
-
 package paagbi.model.klaseak;
 
 import java.util.ArrayList;
